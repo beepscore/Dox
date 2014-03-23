@@ -13,6 +13,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    // Call URLForUbiquityContainerIdentifier: to give app permission to access the URL.
+    // nil argument returns the first iCloud Container set up for the project.
+    // iCloud does not work on simulator
+    NSURL *ubiq = [[NSFileManager defaultManager]
+                   URLForUbiquityContainerIdentifier:nil];
+
+    if (ubiq) {
+        NSLog(@"iCloud access at %@", ubiq);
+        // TODO: Load document...
+    } else {
+        NSLog(@"No iCloud access");
+    }
     return YES;
 }
 							
