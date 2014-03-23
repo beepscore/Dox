@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSNote.h"
 
-@interface BSViewController : UIViewController
+@interface BSViewController : UIViewController <UITextViewDelegate>
+
+@property (strong) BSNote * doc;
+@property (weak) IBOutlet UITextView * noteView;
 
 @end
