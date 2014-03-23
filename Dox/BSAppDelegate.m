@@ -8,6 +8,8 @@
 
 #import "BSAppDelegate.h"
 
+#define kFILENAME @"mydocument.dox"
+
 @implementation BSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
