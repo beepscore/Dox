@@ -24,7 +24,7 @@
 
     if (ubiq) {
         NSLog(@"iCloud access at %@", ubiq);
-        // TODO: Load document...
+        [self loadDocument];
     } else {
         NSLog(@"No iCloud access");
     }
@@ -56,6 +56,57 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)loadDocument
+{
+    self.query = [[NSMetadataQuery alloc] init];
+
+    // iCloud uses NSMetadataQueryUbiquitousDocumentsScope
+    [self.query setSearchScopes:[NSArray arrayWithObject:
+                                 NSMetadataQueryUbiquitousDocumentsScope]];
+
+    // use %K to avoid adding " delimiters around keypath
+    NSPredicate *pred = [NSPredicate predicateWithFormat:
+                         @"%K == %@", NSMetadataItemFSNameKey, kFILENAME];
+    [self.query setPredicate:pred];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(queryDidFinishGathering:)
+                                                 name:NSMetadataQueryDidFinishGatheringNotification
+                                               object:self.query];
+
+    // ask iCloud for current contents.
+    [self.query startQuery];
+}
+
+- (void)queryDidFinishGathering:(NSNotification *)notification
+{
+    NSMetadataQuery *query = [notification object];
+
+    // must explicitly stop query or else it will keep running for the life of the application
+    [query disableUpdates];
+    // stop query but don't delete its results
+    [query stopQuery];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSMetadataQueryDidFinishGatheringNotification
+                                                  object:query];
+    self.query = nil;
+
+	[self loadData:query];
+}
+
+- (void)loadData:(NSMetadataQuery *)query
+{
+    if ([query resultCount] == 1) {
+
+        // NSMetadataItem has a set of keys that you can use to look up information about each file
+        NSMetadataItem *item = [query resultAtIndex:0];
+        NSURL *url = [item valueForAttribute:NSMetadataItemURLKey];
+
+        self.doc = [[BSNote alloc] initWithFileURL:url];
+	}
 }
 
 @end

@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSNote.h"
+#import "BSViewController.h"
 
 @interface BSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) BSViewController *viewController;
+@property (strong) BSNote *doc;
+@property (strong) NSMetadataQuery *query;
+
+- (void)loadDocument;
 
 @end
