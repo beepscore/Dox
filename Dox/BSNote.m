@@ -24,6 +24,9 @@
         // When the note is first created, assign some default content
         self.noteContent = @"Empty"; 
     }
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"noteModified"
+                                                        object:self];
     
     return YES;    
 }
