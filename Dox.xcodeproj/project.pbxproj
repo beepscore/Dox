@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEC6E73C18DF487600828195 /* BSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC6E73B18DF487600828195 /* BSNote.m */; };
+		DEC6E73D18DF487600828195 /* BSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC6E73B18DF487600828195 /* BSNote.m */; };
 		DED0C8AF18DEADCA00898FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0C8AE18DEADCA00898FEF /* Foundation.framework */; };
 		DED0C8B118DEADCA00898FEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0C8B018DEADCA00898FEF /* CoreGraphics.framework */; };
 		DED0C8B318DEADCA00898FEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0C8B218DEADCA00898FEF /* UIKit.framework */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		DEC1487018DEB38100880ACA /* Dox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dox.entitlements; sourceTree = "<group>"; };
+		DEC6E73A18DF487500828195 /* BSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNote.h; sourceTree = "<group>"; };
+		DEC6E73B18DF487600828195 /* BSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNote.m; sourceTree = "<group>"; };
 		DED0C8AB18DEADCA00898FEF /* Dox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED0C8AE18DEADCA00898FEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DED0C8B018DEADCA00898FEF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +126,8 @@
 				DEC1487018DEB38100880ACA /* Dox.entitlements */,
 				DED0C8BD18DEADCA00898FEF /* BSAppDelegate.h */,
 				DED0C8BE18DEADCA00898FEF /* BSAppDelegate.m */,
+				DEC6E73A18DF487500828195 /* BSNote.h */,
+				DEC6E73B18DF487600828195 /* BSNote.m */,
 				DED0C8C018DEADCA00898FEF /* Main_iPhone.storyboard */,
 				DED0C8C318DEADCA00898FEF /* Main_iPad.storyboard */,
 				DED0C8C618DEADCA00898FEF /* BSViewController.h */,
@@ -272,6 +278,7 @@
 			files = (
 				DED0C8C818DEADCA00898FEF /* BSViewController.m in Sources */,
 				DED0C8BB18DEADCA00898FEF /* main.m in Sources */,
+				DEC6E73C18DF487600828195 /* BSNote.m in Sources */,
 				DED0C8BF18DEADCA00898FEF /* BSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC6E73D18DF487600828195 /* BSNote.m in Sources */,
 				DED0C8DD18DEADCB00898FEF /* DoxTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
