@@ -23,6 +23,12 @@
                                                  name:@"noteModified" object:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.noteView.text = self.doc.noteContent;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -42,8 +48,18 @@
     // to enable the user to accept/refuse/merge the differences
     // between the local version and the iCloud one.
     self.doc = notification.object;
-
+    
     self.noteView.text = self.doc.noteContent;
+}
+
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView
+{
+    self.doc.noteContent = textView.text;
+
+    // Notify iCloud about every change (i.e. each time a character is added or deleted).
+    // For efficiency, it would be better to just tell iCloud every so often, or when the user has finished a batch of edits.
+    [self.doc updateChangeCount:UIDocumentChangeDone];
 }
 
 @end
