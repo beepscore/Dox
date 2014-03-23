@@ -100,12 +100,21 @@
 - (void)loadData:(NSMetadataQuery *)query
 {
     if ([query resultCount] == 1) {
-
+        
         // NSMetadataItem has a set of keys that you can use to look up information about each file
         NSMetadataItem *item = [query resultAtIndex:0];
         NSURL *url = [item valueForAttribute:NSMetadataItemURLKey];
-
+        
         self.doc = [[BSNote alloc] initWithFileURL:url];
+        
+        [self.doc openWithCompletionHandler:^(BOOL success) {
+            if (success) {
+                NSLog(@"iCloud document opened");
+            } else {
+                NSLog(@"failed opening document from iCloud");
+            }
+        }];
+        
 	}
 }
 
