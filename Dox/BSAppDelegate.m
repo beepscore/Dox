@@ -115,7 +115,25 @@
             }
         }];
         
-	}
+	} else {
+
+        NSURL *ubiq = [[NSFileManager defaultManager]
+                       URLForUbiquityContainerIdentifier:nil];
+        NSURL *ubiquitousPackage = [[ubiq URLByAppendingPathComponent:
+                                     @"Documents"] URLByAppendingPathComponent:kFILENAME];
+        
+        self.doc = [[BSNote alloc] initWithFileURL:ubiquitousPackage];
+        
+        [self.doc saveToURL:[self.doc fileURL]
+           forSaveOperation:UIDocumentSaveForCreating
+          completionHandler:^(BOOL success) {
+              if (success) {
+                  [self.doc openWithCompletionHandler:^(BOOL success) {
+                      NSLog(@"new document opened from iCloud");
+                  }];                
+              }
+          }];
+    }
 }
 
 @end
