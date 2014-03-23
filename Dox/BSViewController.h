@@ -11,7 +11,7 @@
 
 @interface BSViewController : UIViewController <UITextViewDelegate>
 
-@property (strong) BSNote * doc;
-@property (weak) IBOutlet UITextView * noteView;
+@property (strong) BSNote *doc;
+@property (weak) IBOutlet UITextView *noteView;
 
 @end
