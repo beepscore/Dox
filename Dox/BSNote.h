@@ -10,4 +10,6 @@
 
 @interface BSNote : UIDocument
 
+@property (strong) NSString *noteContent;
+
 @end
