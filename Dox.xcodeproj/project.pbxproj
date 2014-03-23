@@ -22,6 +22,8 @@
 		DED0C8D318DEADCB00898FEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0C8B218DEADCA00898FEF /* UIKit.framework */; };
 		DED0C8DB18DEADCB00898FEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED0C8D918DEADCB00898FEF /* InfoPlist.strings */; };
 		DED0C8DD18DEADCB00898FEF /* DoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0C8DC18DEADCB00898FEF /* DoxTests.m */; };
+		DEFEAF0618DEB0D500005D7E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DEFEAF0518DEB0D500005D7E /* README.md */; };
+		DEFEAF0718DEB0D500005D7E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DEFEAF0518DEB0D500005D7E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		DED0C8D818DEADCB00898FEF /* DoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoxTests-Info.plist"; sourceTree = "<group>"; };
 		DED0C8DA18DEADCB00898FEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DED0C8DC18DEADCB00898FEF /* DoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoxTests.m; sourceTree = "<group>"; };
+		DEFEAF0518DEB0D500005D7E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 		DED0C8A218DEADCA00898FEF = {
 			isa = PBXGroup;
 			children = (
+				DEFEAF0518DEB0D500005D7E /* README.md */,
 				DED0C8B418DEADCA00898FEF /* Dox */,
 				DED0C8D618DEADCB00898FEF /* DoxTests */,
 				DED0C8AD18DEADCA00898FEF /* Frameworks */,
@@ -234,6 +238,7 @@
 			files = (
 				DED0C8C518DEADCA00898FEF /* Main_iPad.storyboard in Resources */,
 				DED0C8CA18DEADCA00898FEF /* Images.xcassets in Resources */,
+				DEFEAF0618DEB0D500005D7E /* README.md in Resources */,
 				DED0C8C218DEADCA00898FEF /* Main_iPhone.storyboard in Resources */,
 				DED0C8B918DEADCA00898FEF /* InfoPlist.strings in Resources */,
 			);
@@ -243,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFEAF0718DEB0D500005D7E /* README.md in Resources */,
 				DED0C8DB18DEADCB00898FEF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +477,7 @@
 				DED0C8E218DEADCB00898FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DED0C8E318DEADCB00898FEF /* Build configuration list for PBXNativeTarget "DoxTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +486,7 @@
 				DED0C8E518DEADCB00898FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
