@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE537C7918DFA07700315304 /* BSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE537C7818DFA07700315304 /* BSTableViewController.m */; };
+		DE537C7A18DFA07700315304 /* BSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE537C7818DFA07700315304 /* BSTableViewController.m */; };
 		DEC6E73C18DF487600828195 /* BSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC6E73B18DF487600828195 /* BSNote.m */; };
 		DEC6E73D18DF487600828195 /* BSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC6E73B18DF487600828195 /* BSNote.m */; };
 		DED0C8AF18DEADCA00898FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0C8AE18DEADCA00898FEF /* Foundation.framework */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE537C7718DFA07700315304 /* BSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTableViewController.h; sourceTree = "<group>"; };
+		DE537C7818DFA07700315304 /* BSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTableViewController.m; sourceTree = "<group>"; };
 		DEC1487018DEB38100880ACA /* Dox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dox.entitlements; sourceTree = "<group>"; };
 		DEC6E73A18DF487500828195 /* BSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNote.h; sourceTree = "<group>"; };
 		DEC6E73B18DF487600828195 /* BSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNote.m; sourceTree = "<group>"; };
@@ -126,12 +130,14 @@
 				DEC1487018DEB38100880ACA /* Dox.entitlements */,
 				DED0C8BD18DEADCA00898FEF /* BSAppDelegate.h */,
 				DED0C8BE18DEADCA00898FEF /* BSAppDelegate.m */,
+				DE537C7718DFA07700315304 /* BSTableViewController.h */,
+				DE537C7818DFA07700315304 /* BSTableViewController.m */,
 				DEC6E73A18DF487500828195 /* BSNote.h */,
 				DEC6E73B18DF487600828195 /* BSNote.m */,
-				DED0C8C018DEADCA00898FEF /* Main_iPhone.storyboard */,
-				DED0C8C318DEADCA00898FEF /* Main_iPad.storyboard */,
 				DED0C8C618DEADCA00898FEF /* BSViewController.h */,
 				DED0C8C718DEADCA00898FEF /* BSViewController.m */,
+				DED0C8C018DEADCA00898FEF /* Main_iPhone.storyboard */,
+				DED0C8C318DEADCA00898FEF /* Main_iPad.storyboard */,
 				DED0C8C918DEADCA00898FEF /* Images.xcassets */,
 				DED0C8B518DEADCA00898FEF /* Supporting Files */,
 			);
@@ -277,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED0C8C818DEADCA00898FEF /* BSViewController.m in Sources */,
+				DE537C7918DFA07700315304 /* BSTableViewController.m in Sources */,
 				DED0C8BB18DEADCA00898FEF /* main.m in Sources */,
 				DEC6E73C18DF487600828195 /* BSNote.m in Sources */,
 				DED0C8BF18DEADCA00898FEF /* BSAppDelegate.m in Sources */,
@@ -287,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE537C7A18DFA07700315304 /* BSTableViewController.m in Sources */,
 				DEC6E73D18DF487600828195 /* BSNote.m in Sources */,
 				DED0C8DD18DEADCB00898FEF /* DoxTests.m in Sources */,
 			);

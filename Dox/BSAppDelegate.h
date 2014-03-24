@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSTableViewController.h"
 #import "BSNote.h"
 #import "BSViewController.h"
 
