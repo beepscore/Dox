@@ -74,9 +74,6 @@
 
 #pragma mark - Navigation
 
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"ShowNote"])
