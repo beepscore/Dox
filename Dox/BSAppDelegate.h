@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BSTableViewController.h"
 #import "BSNote.h"
 
 @interface BSAppDelegate : UIResponder <UIApplicationDelegate>
