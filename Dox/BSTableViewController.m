@@ -92,17 +92,11 @@
 
 - (void)addNote:(id)sender
 {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyyMMdd_hhmmss"];
-    
-    NSString *fileName = [NSString stringWithFormat:@"Note_%@",
-                          [formatter stringFromDate:[NSDate date]]];
-    
     NSURL *ubiq = [[NSFileManager defaultManager]
                    URLForUbiquityContainerIdentifier:nil];
-    NSURL *ubiquitousPackage =
-    [[ubiq URLByAppendingPathComponent:@"Documents"]
-     URLByAppendingPathComponent:fileName];
+
+    NSURL *ubiquitousPackage = [[ubiq URLByAppendingPathComponent:@"Documents"]
+                                URLByAppendingPathComponent:[self filename]];
     
     BSNote *doc = [[BSNote alloc] initWithFileURL:ubiquitousPackage];
     
@@ -114,6 +108,16 @@
          [self.tableView reloadData];
      }
  }];
+}
+
+- (NSString *)filename
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyyMMdd_hhmmss"];
+    
+    NSString *fileName = [NSString stringWithFormat:@"Note_%@",
+                          [formatter stringFromDate:[NSDate date]]];
+    return fileName;
 }
 
 - (void)loadNotes
