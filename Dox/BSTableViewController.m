@@ -89,6 +89,8 @@
     }
 }
 
+#pragma mark - notes
+
 - (void)addNote:(id)sender
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
