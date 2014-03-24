@@ -122,11 +122,14 @@
 
 - (void)loadNotes
 {
+    // Call URLForUbiquityContainerIdentifier: to give app permission to access the URL.
+    // nil argument returns the first iCloud Container set up for the project.
+    // iCloud does not work on simulator
     NSURL *ubiq = [[NSFileManager defaultManager]
                    URLForUbiquityContainerIdentifier:nil];
-
+    
     if (ubiq) {
-
+        
         self.query = [[NSMetadataQuery alloc] init];
         [self.query setSearchScopes:
          [NSArray arrayWithObject:
@@ -139,7 +142,7 @@
                                                      name:NSMetadataQueryDidFinishGatheringNotification
                                                    object:self.query];
         [self.query startQuery];
-
+        
     } else {
         NSLog(@"No iCloud access");
     }
