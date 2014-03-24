@@ -13,9 +13,4 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong) BSNote *doc;
-@property (strong) NSMetadataQuery *query;
-
-- (void)loadDocument;
-
 @end
