@@ -78,8 +78,7 @@
 {
     if ([[segue identifier] isEqualToString:@"ShowNote"])
     {
-        BSViewController *destinationViewController =
-        [segue destinationViewController];
+        BSViewController *destinationViewController = [segue destinationViewController];
         
         NSIndexPath *myIndexPath = [self.tableView
                                     indexPathForSelectedRow];
