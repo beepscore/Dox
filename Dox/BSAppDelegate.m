@@ -65,9 +65,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:NSMetadataQueryDidFinishGatheringNotification
                                                   object:query];
-    self.query = nil;
-
 	[self loadData:query];
+    self.query = nil;
 }
 
 - (void)loadData:(NSMetadataQuery *)query

@@ -151,14 +151,11 @@
     [query disableUpdates];
     [query stopQuery];
 
-    [self loadData:query];
-
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:NSMetadataQueryDidFinishGatheringNotification
                                                   object:query];
-    
+    [self loadData:query];
     self.query = nil;
-    
 }
 
 - (void)loadData:(NSMetadataQuery *)query
